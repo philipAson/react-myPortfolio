@@ -1,5 +1,7 @@
 import React from 'react'
-import TextSpan from './TextSpan';
+import RubberBand from './utils/RubberBand';
+import { Reveal } from './utils/Reveal';
+import { About } from './About';
 
 const OverlayMenu = () => {
 
@@ -7,13 +9,53 @@ const OverlayMenu = () => {
 
   return (
     <div className="container">
+        <Reveal>
         <div className='title'>{title.map((letter, index) => {
             return(
-                <TextSpan key={index}>
+                <RubberBand key={index}>
                     {letter === " " ? "\u00A0" : letter}
-                </TextSpan>
+                </RubberBand>
             )
         })}</div>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+            <About/>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
+        <Reveal>
+            <About/>
+        </Reveal>
       </div>
   )
 }

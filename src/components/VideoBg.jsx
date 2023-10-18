@@ -5,12 +5,12 @@ import OverlayMenu from './OverlayMenu';
 const VideoBg = () => {
   return (
     <div className="bgContainer">
-      <div className="overlay"><div/>
+      {/* <div className="overlay"><div/> */}
         <OverlayMenu/>
         <video src={video} autoPlay loop muted />
         
       </div>
-    </div>
+    // </div>
   )
 }
 
