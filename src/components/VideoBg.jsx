@@ -1,5 +1,5 @@
 import React from 'react'
-import video from "../assets/video.mp4";
+import video from "../assets/portfolioBgVid.mp4";
 import OverlayMenu from './OverlayMenu';
 
 const VideoBg = () => {
