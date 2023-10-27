@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Six+Caps);
+@import url(https://fonts.googleapis.com/css?family=Teko);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Libre-Caslon-Display);
+
+.Header {
+    position: fixed;
+    justify-content: space-between;
+    display: flex;
+  }
+
+.aboutMeContainer:nth-child(odd) {
+  margin-left: auto;
+}
+
+.overlay-grid {
+    margin-bottom: 4rem;
+    /* background-color: aquamarine; */
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: repeat(2,25%);
+    
+}
+
+.resumé {
+  color: antiquewhite;
+  right: 0;
+  padding-top: 0.5rem;
+  width: 20rem;
+  height: 3rem;
+  background-color: rgb(37, 90, 136);
+  position: fixed;
+  z-index: 2;
+  display: block;
+  text-align: center;
+  font-family: "Satisfy";
+  font-size: x-large;
+  border-bottom-left-radius: 16px;
+}
+
+.content {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+.contentContainer {
+    color: antiquewhite;
+  right: 5px;
+  background-color: rgba(53, 109, 159, 0.724);
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.link-img {
+    /* background-color: aqua; */
+    color: red;
+}

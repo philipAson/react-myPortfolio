@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Satisfy); 
 @import url(https://fonts.googleapis.com/css?family=Six+Caps);
+@import url(https://fonts.googleapis.com/css?family=Nabla);
+@import url(https://fonts.googleapis.com/css?family=Bebas-Neue);  
+@import url(https://fonts.googleapis.com/css?family=Teko);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Yanone-Kaffeesatz);
 
 * {
   margin: 0;
@@ -35,37 +40,33 @@ video {
   
 }
 
-.container {
+.OverlayContainer {
   position: absolute;
   width: 90vw;
-  /* background: rgba(250, 235, 215, 0.14); */
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   margin: 2rem;
   gap: 20rem;
-  z-index: 1; /* Ensure the container is behind the overlay */
-}
-.aboutMeContainer {
-  max-width: 40rem;
-  right: 5px;
-  background: rgba(250, 235, 215, 0.35);
-  padding: 10px;
-  border-radius: 8px;
+  z-index: 1;
+
 }
 
-.aboutMeContainer:nth-child(odd) {
-  margin-left: auto;
-}
+
 
 span {
   position: relative;
   display: inline-block;
-  font-family: 'Six Caps', sans-serif;
-  font-size: 192px;
+  font-family: 'Oswald';
+  font-size: 190px;
+  height: 230px;
   font-weight: bold;
   letter-spacing: 10px;
   line-height: 1;
   margin: 0px;
   color: antiquewhite;
 }
+
+
+
+
