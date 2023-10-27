@@ -19,6 +19,38 @@ const OverlayMenu = () => {
         <Reveal>
           <Links />
         </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <div></div>
+        <div></div>
+        <Reveal>
+          <Links />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <div></div>
+        <div></div>
+        <Reveal>
+          <Links />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <div></div>
+        <div></div>
+        <Reveal>
+          <Links />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <div></div>
+        <div></div>
+        <Reveal>
+          <Links />
+        </Reveal>
         
       </div>
     </div>

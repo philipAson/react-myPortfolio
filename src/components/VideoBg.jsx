@@ -18,9 +18,9 @@ const VideoBg = () => {
   return (
     <div className="bgContainer">
       {/* when editing */}
-      {/* <video src={video} autoPlay loop muted /> */}
+      <video src={video} autoPlay loop muted />
       {/* when deploying */}
-      <video src={vidBglocal} autoPlay loop muted />
+      {/* <video src={vidBglocal} autoPlay loop muted /> */}
     </div>
   );
 };
