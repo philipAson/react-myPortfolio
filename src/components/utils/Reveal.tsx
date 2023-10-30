@@ -4,21 +4,23 @@ import { easeIn, motion, useAnimation, useInView } from "framer-motion";
 interface Props {
   children: JSX.Element;
   width?: "fit-content" | "100%";
+  delayTime : number;
 }
 
-export const Reveal = ({ children, width = "fit-content" }: Props) => {
+export const Reveal = ({ delayTime, children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const mainControls = useAnimation();
-//   const slideControls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
-    //   slideControls.start("visible");
+    
     }
   }, [isInView]);
+
+  // const revealDelay = 
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
@@ -29,7 +31,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.75, delay: 0.45 }}
+        transition={{ duration: 0.75, delay: delayTime }}
       >
         {children}
       </motion.div>
@@ -38,18 +40,6 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
           hidden: { left: 0 },
           visible: { left: "100%" },
         }}
-        // initial="hidden"
-        // animate={slideControls}
-        // transition={{ duration: 0.5, ease: "easeIn" }}
-        // style={{
-        //   position: "absolute",
-        //   top: 4,
-        //   bottom: 4,
-        //   left: 0,
-        //   right: 0,
-        //   background: "rgba(250, 235, 215, 0.14)",
-        //   zIndex: 20,
-        // }}
       />
     </div>
   );
