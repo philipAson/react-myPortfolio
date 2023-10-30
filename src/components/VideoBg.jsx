@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import vidBglocal from "../assets/vidBgSmall.mp4";
+// import vidBglocal from "../assets/vidBgSmall.mp4";
 
 const VideoBg = () => {
   const s3Url =

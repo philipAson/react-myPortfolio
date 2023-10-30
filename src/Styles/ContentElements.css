@@ -10,53 +10,39 @@
     display: flex;
   }
 
-.aboutMeContainer:nth-child(odd) {
-  margin-left: auto;
-}
-
 .overlay-grid {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.354);
     margin-bottom: 4rem;
     /* background-color: aquamarine; */
     display: grid;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
-    grid-template-columns: repeat(2,25%);
+    grid-template-columns: repeat(2,35%);
+    padding: 2rem;
     
 }
 
 .resumé {
-  color: antiquewhite;
+  color: white;
+  /* color: antiquewhite; */
   right: 0;
   padding-top: 0.5rem;
   width: 20rem;
   height: 3rem;
-  background-color: rgb(37, 90, 136);
+  background-color: #373737;
+  /* background-color: rgb(37, 90, 136); */
   position: fixed;
   z-index: 2;
   display: block;
   text-align: center;
   font-family: "Satisfy";
   font-size: x-large;
-  border-bottom-left-radius: 16px;
-}
-
-.content {
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-
-.contentContainer {
-    color: antiquewhite;
-  right: 5px;
-  background-color: rgba(53, 109, 159, 0.724);
-  padding: 10px;
-  border-radius: 8px;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  border-bottom-left-radius: 20px;
 }
 
 .link-img {
     /* background-color: aqua; */
+
     color: red;
 }

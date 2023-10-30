@@ -45,7 +45,7 @@ video {
   width: 90vw;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  overflow-x: auto;
   margin: 2rem;
   gap: 20rem;
   z-index: 1;
@@ -64,7 +64,8 @@ span {
   letter-spacing: 10px;
   line-height: 1;
   margin: 0px;
-  color: antiquewhite;
+  color: white;
+  /* color: antiquewhite; */
 }
 
 
