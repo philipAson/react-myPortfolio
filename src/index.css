@@ -5,15 +5,12 @@
 @import url(https://fonts.googleapis.com/css?family=Teko);
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Yanone-Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=San-Fransisco);
 
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-
-body {
-  /* overflow: hidden; */
 }
 
 .bgContainer {
@@ -52,8 +49,6 @@ video {
 
 }
 
-
-
 span {
   position: relative;
   display: inline-block;
@@ -65,7 +60,6 @@ span {
   line-height: 1;
   margin: 0px;
   color: white;
-  /* color: antiquewhite; */
 }
 
 

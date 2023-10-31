@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dicebear/collection": "^7.0.1",
+    "@dicebear/core": "^7.0.1",
     "framer-motion": "^10.16.4",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
