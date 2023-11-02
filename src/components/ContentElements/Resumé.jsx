@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Resumé = () => {
-  return (
-    <div className='resumé'>Resumé</div>
-  )
-}
+  const [resuméExpand, setResuméExpand] = useState(false);
 
-export default Resumé
+  const expandResumé = () => {
+    setResuméExpand(true);
+  };
+
+  return (
+    <div>
+      <div className="resumé" onClick={expandResumé}>
+        Resumé
+      </div>
+      <div className="resumé-container">
+        
+      </div>
+    </div>
+  );
+};
+
+export default Resumé;
