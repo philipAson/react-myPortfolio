@@ -4,6 +4,7 @@
     z-index: 2;
     width: 100%;
     margin-bottom: 20px;
+    margin-left: 200px;
 }
 
 .message-group > div:first-child{
@@ -25,7 +26,7 @@
 }
 
 .message{
-   max-width: 75%;
+   max-width: 55%;
    margin: 2px 0;
    display: flex; 
 }
@@ -98,7 +99,7 @@
 }
 
 .message-reply{
-    max-width: 75%;
+    max-width: 55%;
     margin: 2px 0 2px auto;
     display: flex; 
  }

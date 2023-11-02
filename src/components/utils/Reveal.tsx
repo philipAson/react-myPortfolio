@@ -9,16 +9,16 @@ interface Props {
 
 export const Reveal = ({ delayTime, children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // const isInView = useInView(ref, { once: true });
 
-  const mainControls = useAnimation();
+  // const mainControls = useAnimation();
 
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
+  // useEffect(() => {
+  //   if (isInView) {
+  //     mainControls.start("visible");
     
-    }
-  }, [isInView]);
+  //   }
+  // }, [isInView]);
 
   // const revealDelay = 
 
@@ -30,7 +30,7 @@ export const Reveal = ({ delayTime, children, width = "fit-content" }: Props) =>
           visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
-        animate={mainControls}
+        animate="visible"
         transition={{ duration: 0.75, delay: delayTime }}
       >
         {children}
