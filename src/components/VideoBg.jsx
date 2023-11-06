@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import vidBglocal from "../assets/vidBgSmall.mp4";
 
 const VideoBg = () => {
   const s3Url =
@@ -16,11 +15,8 @@ const VideoBg = () => {
   }, []);
 
   return (
-    <div className="bgContainer">
-      {/* when editing */}
-      <video src={video} autoPlay loop muted />
-      {/* when deploying */}
-      {/* <video src={vidBglocal} autoPlay loop muted /> */}
+    <div className="bgContainer"> 
+      <video src={video} autoPlay loop muted onCanPlay={loadVideo} />
     </div>
   );
 };
