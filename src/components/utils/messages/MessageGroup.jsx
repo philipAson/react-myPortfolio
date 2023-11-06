@@ -43,7 +43,7 @@ const MessageGroup = ({ children, isReply = false }) => {
           alt="meeee"
         />
       </div>
-      <div>{childrenWithProps}</div>
+      <div className="children">{childrenWithProps}</div>
     </div>
   );
 };

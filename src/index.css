@@ -59,6 +59,14 @@ span {
   color: white;
 }
 
+@media (max-width: 1057px) {
+  span {
+    font-size: 60px;
+    height: 70px;
+    letter-spacing: 3px;
+  }
+}
+
 
 
 

@@ -30,3 +30,13 @@
   font-size: x-large;
   border-bottom-left-radius: 20px;
 }
+
+@media (max-width: 660px) {
+  .resumé {
+    width: 5rem;
+    height: 1.7rem;
+    padding-top: 0;
+    font-size: medium;
+    border-bottom-left-radius: 6px;
+  }
+}

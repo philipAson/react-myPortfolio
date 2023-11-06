@@ -7,7 +7,11 @@ const FadeTop = ({children}) => {
   useEffect(() => {
     const onScroll = () => {
       const top = myRef.current.getBoundingClientRect().top;
-      setOpacity(Math.max(0, 1 - (250 - top) / 120));
+      if (window.matchMedia('(max-width: 600px)').matches) {
+        setOpacity(Math.max(0, 1 - (50 - top) / 120));
+    } else {
+        setOpacity(Math.max(0, 1 - (250 - top) / 120));
+    }
     };
     window.addEventListener('scroll', onScroll);
 
