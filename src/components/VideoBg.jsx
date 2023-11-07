@@ -16,7 +16,7 @@ const VideoBg = () => {
 
   return (
     <div className="bgContainer"> 
-      <video src={video} autoPlay loop muted onCanPlay={loadVideo} />
+      <video src={video} autoPlay loop muted playsInline />
     </div>
   );
 };

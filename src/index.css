@@ -61,9 +61,14 @@ span {
 
 @media (max-width: 1057px) {
   span {
-    font-size: 60px;
-    height: 70px;
-    letter-spacing: 3px;
+    font-size: 55px;
+    height: 65px;
+    letter-spacing: 2px;
+  }
+
+  .app-div {
+    position: relative;
+    overflow-x: hidden;
   }
 }
 
