@@ -15,7 +15,7 @@ const FadeTop = ({children}) => {
     };
     window.addEventListener('scroll', onScroll);
 
-    return() => {
+    return () => {
         window.removeEventListener('scroll', onScroll);
    };
   }, []);
