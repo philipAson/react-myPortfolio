@@ -1,54 +1,130 @@
-.Header {
-    position: fixed;
-    justify-content: space-between;
-    display: flex;
-    z-index: 5;
-  }
-
-.overlay-grid {
-    margin-bottom: 4rem;
-    width: 90%;
-    padding: 2rem;
+.app-div {
+  /* position: relative; */
+  overflow-x: auto;
+  /* border: 2px greenyellow solid; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: auto;
 }
 
-.overlay-grid > div {
-  min-width: 80vw;
-}
-
-.resumé {
-  color: white;
-  right: 0;
-  padding-top: 0.5rem;
-  width: 20rem;
-  height: 3rem;
-  background-color: #373737;
+.OverlayContainer {
   position: fixed;
-  z-index: 2;
-  display: block;
-  text-align: center;
-  font-family: "Satisfy";
-  font-size: x-large;
-  border-bottom-left-radius: 20px;
+  width: 96vw;
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+  /* border: 1px red solid; */
 }
 
-.resumé.expanded {
-  border-radius: 0;
-  width: 100vw; /* Ändra bredden till 100vw när resuméExpand är true */
-  /* Lägg till andra stilar för expansion här om det behövs */
-}
-
-iframe{
-  margin-top: 2rem;
+.TopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 80vh;
+  height: fit-content;
+  /* border: 3px blue solid; */
 }
 
-@media (max-width: 660px) {
-  .resumé {
-    width: 5rem;
-    height: 1.7rem;
-    padding-top: 0;
-    font-size: medium;
-    border-bottom-left-radius: 6px;
+.Header {
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-between;
+  display: flex;
+  z-index: 5;
+  /* border: 1px solid black; */
+  margin-top: 20px;
+  /* margin-left: 10px; */
+}
+
+.navbar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  /* border: 2px solid violet; */
+}
+
+.contentContainer {
+  /* border: #ffc909 1px solid; */
+  width: auto;
+  display: flex;
+  justify-content: center;
+  /* overflow: auto; */
+}
+
+.iconBorder {
+  opacity: 80%;
+  padding: 3px;
+  margin-right: 3vw;
+  margin-bottom: 2vh;
+}
+.iconButton {
+  transition: transform 0.3s ease; /* Övergång för knappen */
+}
+
+.iconButton:hover {
+  transform: scale(1.1); /* Förstorar knappen vid hover */
+}
+
+.iconBorder:hover {
+  opacity: 100%;
+}
+.iconButton img {
+  width: 80px; /* Basbredd för bilden */
+  height: 80px; /* Bashöjd för bilden */
+  object-fit: contain; /* Ser till att bilden passar väl in */
+  transition: transform 0.3s ease; /* Lägg till en mjuk övergångseffekt för bilden */
+}
+
+.iconButton:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1350px) {
+  
+  .OverlayContainer {
+    /* overflow: auto; */
+    margin: 1rem;
+    padding-top: 2rem;
+    width: 97vw;
   }
+  .TopRow {
+    align-content: flex-start;
+    justify-content: center;
+  }
+  .Header {
+    margin-top: 0;
+    margin-left: 0px;
+  }
+
+  .navbar {
+    position: fixed;
+    left: 5px;
+    top: 90px;
+    flex-direction: column;
+  }
+
+  .iconBorder {
+    border: 0px;
+  }
+  .iconButton img {
+    width: 40px;
+    height: 40px;
+  }
+  span {
+    font-size: 50px;
+    height: 60px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (max-height: 800px) {
+   .OverlayContainer{
+    overflow: auto;
+   }
 }
