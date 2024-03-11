@@ -6,7 +6,7 @@ const Header = () => {
   const title = "Hi, i'm Philip".split("");
   return (
     <div className="Header">
-        <Reveal>
+        
         {title.map((letter, index) => {
         return (
           <RubberBand key={index}>
@@ -14,7 +14,7 @@ const Header = () => {
           </RubberBand>
         );
       })}
-        </Reveal>
+        
       
     </div>
   );

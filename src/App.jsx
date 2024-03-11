@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className='app-div'>
-      <Resumé/>
+      {/* <Resumé/> */}
       <Overlay/>
       <VideoBg/>
     </div>
