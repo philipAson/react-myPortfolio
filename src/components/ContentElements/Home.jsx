@@ -65,7 +65,7 @@ const Home = () => {
     {
       label: "The Beer Game",
       text: "Checkout what i did on my last internship at MA-System. A verry fun and challenging project where i was responsible for putting together an Online game that is widely used by universitys around the world.",
-      imgPath: "src/assets/Screenshot 2024-03-10 at 13.18.57.jpg",
+      imgPath: "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/Screenshot+2024-03-10+at+13.18.57.jpg",
       href: "https://beergame.masystem.com/",
       icon1: <Link />,
     },
@@ -79,7 +79,7 @@ const Home = () => {
           <br />
         </>
       ),
-      imgPath: "src/assets/Screenshot 2024-03-11 at 10.34.42.jpg",
+      imgPath: "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/Screenshot+2024-03-11+at+10.34.42.jpg",
       href: "https://github.com/philipAson?tab=repositories",
       icon1: <Link />,
     },
@@ -112,7 +112,7 @@ const Home = () => {
           <br />
         </>
       ),
-      imgPath: "src/assets/Screenshot 2024-03-11 at 11.55.24.jpg",
+      imgPath: "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/Screenshot+2024-03-11+at+11.55.24.jpg",
       href: "https://www.folkuniversitetet.se/vara-skolor/yh-utbildningar/alla-yh-utbildningar/it-data/mobilapplikationsutvecklare-distans/utbildningens-innehall/",
       icon1: <Link />,
     },
