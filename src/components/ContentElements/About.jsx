@@ -26,32 +26,31 @@ const About = () => {
             }}
           >
             <p>
-              Im a software developer in progress and is currently looking for
-              an internship from the 8th of April to 7th of June (v.15 -v.24).
-              After that my two years at the schoolbench is over and im out on
-              the market.
+              I am an software developer in progress and is currently looking
+              for an internship from the 8th of April to 7th of June (v.15
+              -v.24). After that my two years at the schoolbench is over.
             </p>
             <br />
             <p>
-              What you will gain is a free worker for 9 weeks that is verry
-              driven and eager to learn everything that involvs coding. I am not
-              afraid to dig in to new things, infact i verry much enjoy doing
-              so! Also, i thrive when given responsibility and see it as an
-              oportunity to show i'm reliable!
+              What you will gain is a free worker for 9 weeks that is very
+              driven and eager to learn everything that involves coding. I am
+              not afraid to dig in to new things, in fact i very much enjoy
+              doing so! Also, I thrive when given responsibility and see it as
+              an opportunity to show i'm reliable!
             </p>
             <br />
             <p>
-              These two years i have been studying both iOS and Android
+              These two years I have been studying both iOS and Android
               development and been coding apps using Swift, Kotlin and Java.
-              Lately i have been diving in to some backend and webdevelopment
+              Lately I have been diving in to some backend and webdevelopment
               using React And setting up Databases and API's with AWS services.
               This website was built with just that.
             </p>
             <br />
             <p>
-              On my last internship i
-              was responsible for putting together an Online game for MA-System
-              which im verry proud of. Go check it out on the main page!
+              On my last internship I was responsible for putting together an
+              Online game for MA-System which I am very proud of. Go check it
+              out on the main page!
             </p>
           </div>
         </div>
