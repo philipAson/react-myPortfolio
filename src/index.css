@@ -5,35 +5,154 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url("https://fonts.googleapis.com/css2?family=Micro+5&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+    font-family: "Murmure";
+    src: url("/fonts/le-murmure.ttf") format("truetype");
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    height: 30px;
+    outline: none;
+}
+
+.nav-link:focus,
+.nav-link:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.dot {
+    color: crimson;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Murmure", sans-serif;
+}
 
 * {
-  margin: 0;
-  /* padding: 0; */
-  font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.BottomRow {
+    margin-top: auto;
+    width: calc(100% - 70px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.BottomRow img {
+    width: 50px;
+}
+
+.rightVertical {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 130px; /* Justera bredd efter behov */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.logos-slide {
+    display: flex;
+    flex-direction: column;
+    animation: 50s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 50px;
+    margin: 20px 0px;
 }
 
 .bgContainer {
-  width: 100%;
-  height: 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.homeContent {
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-link {
+    color: inherit; /* ärver färgen från föräldern, t.ex. svart eller #636d7a */
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px; /* valfritt */
+    margin: 0.5rem 0; /* valfritt spacing */
+    display: block; /* gör varje länk till en rad */
+}
+
+.about-page {
+    color: inherit; /* ärver färgen från föräldern, t.ex. svart eller #636d7a */
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: -100px;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+.contact-link:hover {
+    color: #6e4a7e; /* Elixir-lila på hover */
+}
+
+.footer-paragraph {
+    padding-left: 20px;
+    margin-top: auto;
+    color: crimson;
+    font-family: monospace;
+    font-size: 14px;
 }
 
 video {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 span {
-  position: relative;
-  display: inline-block;
-  /* font-family: 'Oswald'; */
-  font-family: "Micro 5";
-  font-size: 190px;
-  height: 230px;
-  font-weight: bold;
-  letter-spacing: 10px;
-  line-height: 1;
-  /* margin: 0px; */
-  color: #636d7a;
+    position: relative;
+    display: inline-block;
+    font-family: "Murmure", sans-serif;
+    font-size: 190px;
+    height: 230px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    line-height: 1;
 }

@@ -1,37 +1,50 @@
-import React from "react";
-import { IconButton } from "@mui/material";
-import motherShipIc from "../../assets/MothershipIc.png";
-import Avatar2Ic from "../../assets/Avatar2Ic.png";
-import documentIC from "../../assets/ducumentIc.png";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = ({ navigateHome, navigateResumé, navigateAbout }) => {
+const NavBar = () => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <div className="navbar">
-      <div className="iconBorder">
-        <IconButton className="iconButton" disableRipple onClick={navigateHome}>
-          <img src={motherShipIc} alt="home" />
-        </IconButton>
-      </div>
-      <div className="iconBorder">
-        <IconButton
-          className="iconButton"
-          disableRipple
-          onClick={navigateResumé}
-        >
-          <img src={documentIC} alt="resumé" />
-        </IconButton>
-      </div>
-      <div className="iconBorder">
-        <IconButton
-          className="iconButton"
-          disableRipple
-          onClick={navigateAbout}
-        >
-          <img src={Avatar2Ic} alt="about" />
-        </IconButton>
-      </div>
+      {[
+        { label: "Links", path: "/" },
+        // { label: "resumé", path: "/resumé" },
+        { label: "About", path: "/about" },
+      ].map(({ label, path }) => (
+        <Link to={path} className="nav-link" key={path}>
+          <AnimatePresence mode="wait" initial={false}>
+            {isActive(path) ? (
+              <motion.h1
+                key="text"
+                className="dot"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                † † †
+              </motion.h1>
+            ) : (
+              <motion.h1
+                key="text"
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                {label}
+              </motion.h1>
+            )}
+          </AnimatePresence>
+        </Link>
+      ))}
     </div>
   );
 };
 
 export default NavBar;
+
+
+

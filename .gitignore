@@ -15,7 +15,6 @@ dist-ssr
 # Assets
 *.mp4
 *.png
-*.svg
 
 # Editor directories and files
 .vscode/*

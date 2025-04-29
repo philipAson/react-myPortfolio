@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { easeIn, motion, useAnimation, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
@@ -9,18 +9,6 @@ interface Props {
 
 export const Reveal = ({ delayTime, children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
-  // const isInView = useInView(ref, { once: true });
-
-  // const mainControls = useAnimation();
-
-  // useEffect(() => {
-  //   if (isInView) {
-  //     mainControls.start("visible");
-    
-  //   }
-  // }, [isInView]);
-
-  // const revealDelay = 
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
