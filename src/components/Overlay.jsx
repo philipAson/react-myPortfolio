@@ -33,7 +33,7 @@ const OverlayMenu = () => {
       </div>
       <div className="BottomRow">
         <p className="footer-paragraph">font: Le Murmure by Jérémy Landes. Distributed by velvetyne.fr.</p>
-        <img src="public/my_stack_curve_up_transparent.png" alt="public/my_stack_curve_up_transparent.png" />
+        <img src="my_stack_curve_up_transparent.png" alt="public/my_stack_curve_up_transparent.png" />
       </div>
       <div className="rightVertical">
         <Slider/>

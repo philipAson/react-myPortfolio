@@ -25,14 +25,8 @@ const Slider = () => {
                 {logos.concat(logos).map((src, index) => (
                     <img key={index} src={src} alt="" />
                 ))}
-                {logos.concat(logos).map((src, index) => (
-                    <img key={index} src={src} alt="" />
-                ))}
             </div>
             <div className="logos-slide">
-                {logos.concat(logos).map((src, index) => (
-                    <img key={index} src={src} alt="" />
-                ))}
                 {logos.concat(logos).map((src, index) => (
                     <img key={index} src={src} alt="" />
                 ))}
