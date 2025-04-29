@@ -94,6 +94,6 @@
 
 @media (max-height: 800px) {
     .OverlayContainer {
-        overflow: auto;
+        overflow: hidden;
     }
 }
