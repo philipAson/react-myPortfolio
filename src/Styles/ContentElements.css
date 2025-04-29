@@ -1,130 +1,99 @@
 .app-div {
-  /* position: relative; */
-  overflow-x: auto;
-  /* border: 2px greenyellow solid; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: auto;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: auto;
 }
 
 .OverlayContainer {
-  position: fixed;
-  width: 96vw;
-  height: 96vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  z-index: 1;
-  /* border: 1px red solid; */
+    position: fixed;
+    width: 96vw;
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1;
 }
 
 .TopRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-  /* border: 3px blue solid; */
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-top: 40px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    height: fit-content;
 }
 
 .Header {
-  position: relative;
-  margin-left: 50px;
-  justify-content: space-between;
-  display: flex;
-  z-index: 5;
-  /* border: 1px solid black; */
-  margin-top: 20px;
-  /* margin-left: 10px; */
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    z-index: 5;
+    margin-top: 20px;
 }
 
 .navbar {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  height: fit-content;
-  /* border: 2px solid violet; */
+    margin-top: 17px;
+    position: relative;
+    gap: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
 }
 
 .contentContainer {
-  /* border: #ffc909 1px solid; */
-  width: auto;
-  display: flex;
-  justify-content: center;
-  /* overflow: auto; */
-}
-
-.iconBorder {
-  opacity: 80%;
-  padding: 3px;
-  margin-right: 3vw;
-  margin-bottom: 2vh;
-}
-.iconButton {
-  transition: transform 0.3s ease; /* Övergång för knappen */
-}
-
-.iconButton:hover {
-  transform: scale(1.1); /* Förstorar knappen vid hover */
-}
-
-.iconBorder:hover {
-  opacity: 100%;
-}
-.iconButton img {
-  width: 80px; /* Basbredd för bilden */
-  height: 80px; /* Bashöjd för bilden */
-  object-fit: contain; /* Ser till att bilden passar väl in */
-  transition: transform 0.3s ease; /* Lägg till en mjuk övergångseffekt för bilden */
-}
-
-.iconButton:hover img {
-  transform: scale(1.1);
+    width: auto;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 1350px) {
-  
-  .OverlayContainer {
-    /* overflow: auto; */
-    margin: 1rem;
-    padding-top: 2rem;
-    width: 97vw;
-  }
-  .TopRow {
-    align-content: flex-start;
-    justify-content: center;
-  }
-  .Header {
-    margin-top: 0;
-    margin-left: 0px;
-  }
+    .BottomRow {
+        margin-top: auto;
+        width: calc(100% - 95px);
+        display: flex;
+        justify-content: flex-end;
+    }
 
-  .navbar {
-    position: fixed;
-    left: 5px;
-    top: 90px;
-    flex-direction: column;
-  }
+    .OverlayContainer {
+        margin: 1rem;
+        width: 97vw;
+    }
 
-  .iconBorder {
-    border: 0px;
-  }
-  .iconButton img {
-    width: 40px;
-    height: 40px;
-  }
-  span {
-    font-size: 50px;
-    height: 60px;
-    letter-spacing: 1.5px;
-  }
+    .BottomRow img {
+        margin-top: auto;
+        width: 40px;
+    }
+
+    .TopRow {
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    span {
+        font-size: 50px;
+        height: 60px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-paragraph {
+        padding-left: 20px;
+        margin-top: auto;
+        color: crimson;
+        font-family: monospace;
+        font-size: 6px;
+    }
 }
 
 @media (max-height: 800px) {
-   .OverlayContainer{
-    overflow: auto;
-   }
+    .OverlayContainer {
+        overflow: auto;
+    }
 }
