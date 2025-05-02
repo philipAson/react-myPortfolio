@@ -16,7 +16,7 @@ const NavBar = () => {
         <Link to={path} className="nav-link" key={path}>
           <AnimatePresence mode="wait" initial={false}>
             {isActive(path) ? (
-              <motion.h1
+              <motion.h2
                 key="text"
                 className="dot"
                 initial={{ scale: 0, opacity: 0 }}
@@ -24,10 +24,10 @@ const NavBar = () => {
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                † † †
-              </motion.h1>
+                > {label}
+              </motion.h2>
             ) : (
-              <motion.h1
+              <motion.h2
                 key="text"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const NavBar = () => {
                 transition={{ duration: 0.3 }}
               >
                 {label}
-              </motion.h1>
+              </motion.h2>
             )}
           </AnimatePresence>
         </Link>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"; // Importera useLocation
+import BackgroundDotTrail from "./ContentElements/BackgroundDotTrail";
 
 const VideoBg = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const VideoBg = () => {
 
   return (
     <div className="bgContainer">
-      <video
+      {/* <video
         key={video} // Gör att videon laddas om korrekt när src ändras
         src={video}
         autoPlay
@@ -24,7 +25,8 @@ const VideoBg = () => {
         playsInline
         preload="auto"
         style={{ opacity: 0.8 }} // Visuell förbättring
-      />
+      /> */}
+      <BackgroundDotTrail />
     </div>
   );
 };
