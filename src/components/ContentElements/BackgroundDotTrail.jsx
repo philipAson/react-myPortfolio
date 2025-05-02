@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-const TRAIL_LENGTH = 1000;
-const DOT_SIZE = 2;
+const TRAIL_LENGTH = 75;
+const DOT_SIZE = 1.5;
 
 const BackgroundDotTrailSin = () => {
   const x = useMotionValue(100);
