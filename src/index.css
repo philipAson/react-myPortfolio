@@ -87,7 +87,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .BottomRow img {
     width: 50px;
 }
@@ -101,7 +100,7 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: none;
-  }
+}
 
 .HeaderContainer {
     display: flex;
@@ -171,32 +170,38 @@ h6 {
     box-sizing: border-box;
 }
 
-@keyframes slide {
+@keyframes slide-vertical {
     from {
         transform: translateY(0);
     }
     to {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
 }
 
 .logos {
     overflow: hidden;
+    height: 100%; /* justeras beroende på container */
     padding: 60px 0;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .logos-slide {
     display: flex;
     flex-direction: column;
-    animation: 50s slide infinite linear;
+    animation: slide-vertical 70s linear infinite;
+    will-change: transform; /* 💥 Viktig för flyt */
 }
 
 .logos-slide img {
     width: 50px;
-    margin: 20px 0px;
+    margin: 20px 0;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.logos-slide:hover {
+    animation-play-state: paused;
 }
 
 .homeContent {
@@ -204,7 +209,7 @@ h6 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left:  20%;
+    padding-left: 20%;
     padding-right: calc(20% - var(--right-sidebar-width));
 }
 
@@ -222,7 +227,7 @@ h6 {
     font-size: 16px;
     text-align: left;
     margin-top: -80px;
-    padding-left:  20%;
+    padding-left: 20%;
     padding-right: calc(20% - var(--right-sidebar-width));
 }
 
@@ -258,7 +263,6 @@ span {
 }
 
 @media (max-width: 1350px) {
-
     .Header2 h1 {
         text-decoration: none;
     }
