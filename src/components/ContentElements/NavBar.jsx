@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import HoverableLink from "./HoverableLink";
 
-const NavBar = () => {
+const NavBar = ({ registerLetter }) => {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path;
@@ -10,34 +11,17 @@ const NavBar = () => {
     <div className="navbar">
       {[
         { label: "Links", path: "/" },
-        // { label: "resumé", path: "/resumé" },
         { label: "About", path: "/about" },
       ].map(({ label, path }) => (
         <Link to={path} className="nav-link" key={path}>
-          <AnimatePresence mode="wait" initial={false}>
-            {isActive(path) ? (
-              <motion.h2
-                key="text"
-                className="dot"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                > {label}
-              </motion.h2>
-            ) : (
-              <motion.h2
-                key="text"
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                {label}
-              </motion.h2>
-            )}
-          </AnimatePresence>
+          <HoverableLink
+            as="h2"
+            onRegister={registerLetter}
+            className="nav-heading"
+            style={{ color: isActive(path) ? "crimson" : "inherit" }}
+          >
+            {isActive(path) ? `> ${label}` : label}
+          </HoverableLink>
         </Link>
       ))}
     </div>
@@ -45,6 +29,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 
 

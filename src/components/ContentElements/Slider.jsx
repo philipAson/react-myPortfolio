@@ -42,7 +42,7 @@ const Slider = () => {
                         key={index + allLogos.length}
                         src={src}
                         alt={`logo-${index}`}
-                        loading="lazy"
+                        loading="eager"
                         onError={(e) => {
                             e.target.style.display = "none";
                         }}

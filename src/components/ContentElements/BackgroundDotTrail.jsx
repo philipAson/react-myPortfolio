@@ -1,36 +1,32 @@
-// BackgroundDotTrailSin.jsx
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 const TRAIL_LENGTH = 75;
 const DOT_SIZE = 1.5;
+const COOLDOWN_MS = 800;
 
-const BackgroundDotTrailSin = () => {
+const BackgroundDotTrailSin = ({ letterRefs }) => {
   const x = useMotionValue(100);
   const y = useMotionValue(100);
   const velocity = useRef({ x: 1, y: 1 });
   const [trail, setTrail] = useState([]);
   const dotRef = useRef(null);
   const tick = useRef(0);
+  const cooldownMap = useRef(new WeakMap());
 
   useEffect(() => {
     let animationFrame;
 
     const move = () => {
-      const dot = dotRef.current;
-      if (!dot) return;
-
       const bounds = document.body.getBoundingClientRect();
 
       let newX = x.get() + velocity.current.x;
       let newY = y.get() + velocity.current.y;
 
-      // Zigzag-modifiering med sinus
       tick.current += 0.05;
       newY += Math.sin(tick.current) * 0.5;
       newX += Math.cos(tick.current * 0.2) * 1;
 
-      // Studs på kanter
       if (newX <= 0 || newX >= bounds.width - DOT_SIZE) {
         velocity.current.x *= -1;
         tick.current += Math.PI;
@@ -49,12 +45,33 @@ const BackgroundDotTrailSin = () => {
         return next.length > TRAIL_LENGTH ? next.slice(-TRAIL_LENGTH) : next;
       });
 
+      // 🧠 Kollisionsdetektion med cooldown
+      if (letterRefs?.current?.length) {
+        letterRefs.current.forEach(({ ref, trigger }) => {
+          if (!ref.current) return;
+
+          const rect = ref.current.getBoundingClientRect();
+          const inX = newX >= rect.left && newX <= rect.right;
+          const inY = newY >= rect.top && newY <= rect.bottom;
+
+          if (inX && inY) {
+            const lastHit = cooldownMap.current.get(ref);
+            const now = Date.now();
+
+            if (!lastHit || now - lastHit > COOLDOWN_MS) {
+              trigger();
+              cooldownMap.current.set(ref, now);
+            }
+          }
+        });
+      }
+
       animationFrame = requestAnimationFrame(move);
     };
 
     animationFrame = requestAnimationFrame(move);
     return () => cancelAnimationFrame(animationFrame);
-  }, []);
+  }, [letterRefs]);
 
   return (
     <div
@@ -99,5 +116,6 @@ const BackgroundDotTrailSin = () => {
 };
 
 export default BackgroundDotTrailSin;
+
 
 
