@@ -3,16 +3,16 @@ import { useLocation } from "react-router-dom"; // Importera useLocation
 import BackgroundDotTrail from "./ContentElements/BackgroundDotTrail";
 
 const VideoBg = () => {
-  const location = useLocation();
-  const [video, setVideo] = useState("");
+  // const location = useLocation();
+  // const [video, setVideo] = useState("");
 
-  useEffect(() => {
-    const videoURL = location.pathname === "/about"
-      ? "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/Sequence+01.mp4"
-      : "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/vidBgSmall.mp4";
+  // useEffect(() => {
+  //   const videoURL = location.pathname === "/about"
+  //     ? "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/Sequence+01.mp4"
+  //     : "https://pippin-portfolio-bucket.s3.eu-north-1.amazonaws.com/vidBgSmall.mp4";
 
-    setVideo(videoURL);
-  }, [location]);
+  //   setVideo(videoURL);
+  // }, [location]);
 
   return (
     <div className="bgContainer">
