@@ -19,20 +19,39 @@ const logos = [
 ];
 
 const Slider = () => {
+    const allLogos = logos.concat(logos);
+
     return (
         <div className="logos">
             <div className="logos-slide">
-                {logos.concat(logos).map((src, index) => (
-                    <img key={index} src={src} alt="" />
+                {allLogos.map((src, index) => (
+                    <img
+                        key={index}
+                        src={src}
+                        alt={`logo-${index}`}
+                        loading="lazy"
+                        onError={(e) => {
+                            e.target.style.display = "none"; // döljer trasiga bilder
+                        }}
+                    />
                 ))}
             </div>
             <div className="logos-slide">
-                {logos.concat(logos).map((src, index) => (
-                    <img key={index} src={src} alt="" />
+                {allLogos.map((src, index) => (
+                    <img
+                        key={index + allLogos.length}
+                        src={src}
+                        alt={`logo-${index}`}
+                        loading="lazy"
+                        onError={(e) => {
+                            e.target.style.display = "none";
+                        }}
+                    />
                 ))}
             </div>
         </div>
     );
 };
+
 
 export default Slider;

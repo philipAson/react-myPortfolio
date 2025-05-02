@@ -10,7 +10,7 @@ const RubberBand = ({children}) => {
       controls.start({
 
         transform: [
-          "scale3d(1.2, 1, 1)",
+          "scale3d(1, 1, 1)",
           "scale3d(1.4, .55, 1)",
           "scale3d(.75, 1.25, 1)",
           "scale3d(1.25, 1, 1)",
@@ -19,7 +19,7 @@ const RubberBand = ({children}) => {
         ],
         transition:{
           times: [0, .4, .6, .7, .8, .9],
-          duration: 1,
+          duration: 1.5,
         }
 
       })
