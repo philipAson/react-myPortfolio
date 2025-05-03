@@ -39,7 +39,7 @@ const RubberBand = ({ children, onRegister }) => {
       onMouseOver={() => {
         if (!isPlaying) rubberBand();
       }}
-      style={{ display: "inline-block" }} // viktigt för positionering!
+      style={{ display: "inline-block", height: "fit-content", margin: "0 0 0.75rem 0"}} // viktigt för positionering!
     >
       {children}
     </motion.span>

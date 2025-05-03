@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-const TRAIL_LENGTH = 75;
-const DOT_SIZE = 1.5;
+const TRAIL_LENGTH = 85;
+const DOT_SIZE = 2.8;
 const COOLDOWN_MS = 800;
 
 const BackgroundDotTrailSin = ({ letterRefs }) => {
