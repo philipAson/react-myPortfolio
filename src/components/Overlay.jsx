@@ -7,6 +7,7 @@ import BackgroundDotTrail from "./ContentElements/BackgroundDotTrail";
 import Home from "./ContentElements/Home";
 import About from "./ContentElements/About";
 import Slider from "./ContentElements/Slider";
+import ParticlesComponent from "./Particles";
 
 const Overlay = () => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const Overlay = () => {
     return (
         <div className="OverlayContainer">
             <BackgroundDotTrail letterRefs={letterRefs} />
+            <ParticlesComponent id="tsparticles" />
 
             <div className="TopRow">
                 <Header registerLetter={registerLetter} />
