@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 const TRAIL_LENGTH = 85;
-const DOT_SIZE = 2.3;
+const DOT_SIZE = 2;
 const COOLDOWN_MS = 800;
 
 const BackgroundDotTrail = ({ letterRefs }) => {
@@ -39,15 +39,6 @@ const BackgroundDotTrail = ({ letterRefs }) => {
 
             x.set(newX);
             y.set(newY);
-
-            // 💥 NYTT! Skicka fake mousemove
-            window.dispatchEvent(
-                new MouseEvent("mousemove", {
-                    clientX: newX,
-                    clientY: newY,
-                    bubbles: true,
-                })
-            );
 
             setTrail((prevTrail) => {
                 const next = [...prevTrail, { x: newX, y: newY }];
@@ -89,14 +80,16 @@ const BackgroundDotTrail = ({ letterRefs }) => {
             style={{
                 position: "fixed",
                 inset: 0,
-                zIndex: 0,
+                zIndex: 2,
                 overflow: "hidden",
                 pointerEvents: "none",
                 opacity: 0.5,
             }}
         >
+            {/* Trail dots (utan .dot-klass) */}
             {trail.map((point, index) => (
                 <motion.div
+                    className="dot"
                     key={index}
                     style={{
                         position: "absolute",
@@ -107,9 +100,12 @@ const BackgroundDotTrail = ({ letterRefs }) => {
                         borderRadius: "50%",
                         backgroundColor: "crimson",
                         opacity: index / TRAIL_LENGTH,
+                        zIndex: 1,
                     }}
                 />
             ))}
+
+            {/* Lilla huvuddoten (visuell) */}
             <motion.div
                 ref={dotRef}
                 style={{
@@ -120,6 +116,22 @@ const BackgroundDotTrail = ({ letterRefs }) => {
                     height: DOT_SIZE,
                     borderRadius: "50%",
                     backgroundColor: "crimson",
+                    zIndex: 2,
+                }}
+            />
+
+            {/* Osynlig repulse-zon runt doten */}
+            <div
+                className="dot"
+                style={{
+                    position: "absolute",
+                    left: x.get() - 10 + DOT_SIZE / 2,
+                    top: y.get() - 10 + DOT_SIZE / 2,
+                    width: 100,
+                    height: 100,
+                    opacity: 0,
+                    pointerEvents: "none",
+                    zIndex: 1,
                 }}
             />
         </div>
