@@ -39,7 +39,7 @@ const ParticlesComponent = (props) => {
                             enable: true,
                             selectors: ".dot",
                             mode: "bounce",
-                            type: "rectangle",
+                            type: "circle",
                         },
                     ],
                     onClick: {
@@ -50,24 +50,26 @@ const ParticlesComponent = (props) => {
                         enable: true,
                         mode: "grab",
                     },
+                    onTouch: {
+                        enable: true,
+                        mode: "repulse",
+                    },
                 },
                 modes: {
-                    modes: {
-                        push: {
-                            distance: 200,
-                            duration: 15,
-                        },
-                        grab: {
-                            distance: 150,
-                        },
-                        repulse: {
-                            distance: 250,
-                            duration: 1.2,
-                        },
-                        bounce: {
-                          distance: 250,
-                          duration: 1.2,
-                      },
+                    push: {
+                        distance: 200,
+                        duration: 15,
+                    },
+                    grab: {
+                        distance: 150,
+                    },
+                    repulse: {
+                        distance: 250,
+                        duration: 1.2,
+                    },
+                    bounce: {
+                        distance: 250,
+                        duration: 1,
                     },
                 },
             },
@@ -103,9 +105,6 @@ const ParticlesComponent = (props) => {
                 },
                 shape: {
                     type: "square",
-                    options: {
-                        sides: 5,
-                    },
                 },
                 size: {
                     value: { min: 1, max: 3 },
