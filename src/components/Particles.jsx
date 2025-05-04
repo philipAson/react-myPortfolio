@@ -44,11 +44,11 @@ const ParticlesComponent = (props) => {
                     ],
                     onClick: {
                         enable: true,
-                        mode: "repulse",
+                        mode: "bounce",
                     },
                     onHover: {
                         enable: true,
-                        mode: "grab",
+                        mode: "repulse",
                     },
                     onTouch: {
                         enable: true,
@@ -64,7 +64,7 @@ const ParticlesComponent = (props) => {
                         distance: 150,
                     },
                     repulse: {
-                        distance: 250,
+                        distance: 150,
                         duration: 1.2,
                     },
                     bounce: {
