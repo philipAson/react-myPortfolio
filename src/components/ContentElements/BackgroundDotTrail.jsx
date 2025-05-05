@@ -3,7 +3,7 @@ import { motion, useMotionValue } from "framer-motion";
 
 const TRAIL_LENGTH = 85;
 const DOT_SIZE = 2;
-const COOLDOWN_MS = 800;
+const COOLDOWN_MS = 2000;
 
 const BackgroundDotTrail = ({ letterRefs }) => {
     const x = useMotionValue(100);
@@ -89,7 +89,6 @@ const BackgroundDotTrail = ({ letterRefs }) => {
             {/* Trail dots (utan .dot-klass) */}
             {trail.map((point, index) => (
                 <motion.div
-                    className="dot"
                     key={index}
                     style={{
                         position: "absolute",
@@ -116,7 +115,7 @@ const BackgroundDotTrail = ({ letterRefs }) => {
                     height: DOT_SIZE,
                     borderRadius: "50%",
                     backgroundColor: "crimson",
-                    zIndex: 2,
+                    zIndex: 1,
                 }}
             />
 
@@ -125,13 +124,15 @@ const BackgroundDotTrail = ({ letterRefs }) => {
                 className="dot"
                 style={{
                     position: "absolute",
-                    left: x.get() - 10 + DOT_SIZE / 2,
-                    top: y.get() - 10 + DOT_SIZE / 2,
-                    width: 100,
-                    height: 100,
-                    opacity: 0,
+                    left: x.get() - 25 + DOT_SIZE / 2,
+                    top: y.get() - 25 + DOT_SIZE / 2,
+                    width: 50,
+                    height: 50,
+                    borderRadius: "50%",
+                    background:
+                        "radial-gradient(circle, rgba(255,0,0,0.6) 4%, rgba(255,0,0,0.1) 20%, rgba(222, 219, 219, 0) 100%)",
                     pointerEvents: "none",
-                    zIndex: 1,
+                    zIndex: 3,
                 }}
             />
         </div>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Murmure";
-    src: url("/fonts/le-murmure.ttf") format("truetype");
+    src: url("public/fonts/LeMurmure-Regular.woff2") format("woff2");
 }
 
 :root {
@@ -154,6 +154,7 @@ body {
 
 .dot {
     color: crimson;
+    animation: opacity-pulse 0.7s infinite;
 }
 
 h1,
@@ -169,6 +170,18 @@ h6 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@keyframes opacity-pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.1;
+    }
 }
 
 @keyframes slide-vertical {
