@@ -198,6 +198,7 @@ h6 {
     height: 100%; /* justeras beroende på container */
     padding: 60px 0;
     position: relative;
+    z-index: 3;
 }
 
 .logos-slide {
@@ -205,6 +206,7 @@ h6 {
     flex-direction: column;
     animation: slide-vertical 70s linear infinite;
     will-change: transform; /* 💥 Viktig för flyt */
+    z-index: 3;
 }
 
 .logos-slide img {
@@ -212,6 +214,7 @@ h6 {
     margin: 20px 0;
     object-fit: contain;
     flex-shrink: 0;
+    z-index: 3;
 }
 
 .logos-slide:hover {

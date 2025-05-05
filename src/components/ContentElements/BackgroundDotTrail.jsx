@@ -132,7 +132,7 @@ const BackgroundDotTrail = ({ letterRefs }) => {
                     background:
                         "radial-gradient(circle, rgba(255,0,0,0.6) 4%, rgba(255,0,0,0.1) 20%, rgba(222, 219, 219, 0) 100%)",
                     pointerEvents: "none",
-                    zIndex: 3,
+                    zIndex: 1,
                 }}
             />
         </div>
