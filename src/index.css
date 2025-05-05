@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Murmure";
-    src: url("public/fonts/LeMurmure-Regular.woff2") format("woff2");
-}
+    src: url("/fonts/LeMurmure-Regular.woff2") format("woff2");
+  }  
 
 :root {
     --pad: max(20px, 4vmin);
